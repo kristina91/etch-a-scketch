@@ -1,0 +1,73 @@
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+
+        #container {
+            box-shadow: 0.5em .8em 1.5em purple;
+            outline: 1px solid rgba(179, 66, 244, 0.8);
+            width: 700px;
+            height: auto;
+            position: relative;
+            top: 30px;
+            margin: 0 auto;
+            padding: 0;
+            border: none;
+            font-size: 0;
+        }
+        
+        .grid {
+            display: inline-block;
+            outline: 1px solid rgba(179, 66, 244, 0.5);
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+        
+        .up {
+            width: auto;
+            text-align: center;
+        }
+        
+        .unos {
+            text-align: center;
+            margin: 1em auto;
+            padding: 1em;
+            display: inline;
+        }
+        
+        label {
+            font-size: 1.2em;
+            color: purple;
+            font-family: sans-serif;
+        }
+        
+        .gridNum {
+            border: 1px solid purple;
+            border-radius: .5em;
+            padding: .5em;
+        }
+        
+        .cleaning {
+            text-align: center;
+            padding: .5em;
+            display: inline;
+        }
+        
+        .clean {
+            width: 200px;
+            height: 50px;
+            border: none;
+            border-radius: 1em;
+            background-color: plum;
+            box-shadow: 1em 1em 1em grey;
+            font-family: cursive;
+            font-size: 1.2em;
+            color: antiquewhite;
+        }
+        

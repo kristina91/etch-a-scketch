@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="basic.css">
+    <title>Etch a sketch</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="up">
+        <div class="unos">
+        <label>Enter grid: </label>
+        <input type="number" class="gridNum" id="gridNum" min="2" max="64" value="16">
+    </div>
+    
+    <div class="cleaning">
+        <button id="clean" class="clean">ENTER/RESET</button>
+    </div>
+    </div>
+    
+    <div id="container">
+        
+    </div>
+    <script>
+        
+        function enter_grid() {
+            let new_value = document.getElementById('gridNum').value;
+            clear_grid();
+            
+            
+            if(new_value > 64 || new_value < 2){
+                alert("Maximum grid you can make is 64 and minimum is 2");
+                make_grid(16);
+            }else{
+                make_grid(new_value);
+            }
+            
+            
+        }
+        
+        function clear_grid(){
+            $('.grid').remove();
+        }
+        
+        function make_grid(x){
+            for(let i = 0; i < x ; i++){
+                for( let j = 0; j < x; j++){
+                    $('#container').append("<div class='grid'></div>");
+                };
+            };
+            
+            $('.grid').width(700 / x);
+            $('.grid').height(500 / x);
+            
+        }
+        
+        $(document).ready(function(){
+        
+            make_grid(16);
+            
+            $('.clean').on('click', function(){
+                enter_grid();
+                
+                $('.grid').hover(function(){
+                    $(this).css('background', 'rgb(204, 255, 204)');
+                });
+            });
+            
+            $('.grid').hover(function(){
+                $(this).css('background', 'rgb(204, 255, 204)');
+            });
+            
+        });
+    </script>
+</body>
+</html>
